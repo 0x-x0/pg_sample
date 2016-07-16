@@ -10,6 +10,9 @@ before_script:
   - apt-get install php5-dev
   - pecl install pdo
   - pecl install pdo_pgsql
+  - wget https://phar.phpunit.de/phpunit.phar
+  - chmod +x phpunit.phar
+  - sudo mv phpunit.phar /usr/local/bin/phpunit
 
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
