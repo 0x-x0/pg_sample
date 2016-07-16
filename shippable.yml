@@ -10,16 +10,6 @@ before_script:
   - apt-get install php5-dev
   - pecl install pdo
   - pecl install pdo_pgsql
-  - currentLocation="$PWD"
-  - service mysql.server start
-  - mkdir -p shippable/testresults
-  - mkdir -p shippable/codecoverage
-  - mysql -e 'create database if not exists test;'
-  - wget https://phar.phpunit.de/phpunit.phar
-  - chmod +x phpunit.phar
-  - sudo mv phpunit.phar /usr/local/bin/phpunit
-  - phpunit --version
-  - cd "$currentLocation"
 
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
