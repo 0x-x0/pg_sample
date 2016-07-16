@@ -10,6 +10,7 @@ before_script:
   - apt-get install php5-dev
   - pecl install pdo
   - pecl install pdo_pgsql
+  - psql -c 'CREATE DATABASE test;' -U postgres
   - wget https://phar.phpunit.de/phpunit.phar
   - chmod +x phpunit.phar
   - sudo mv phpunit.phar /usr/local/bin/phpunit
