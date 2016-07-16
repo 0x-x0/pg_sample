@@ -2,8 +2,8 @@
 class PG {
   public static function main() {
     define('DB_SERVER', "127.0.0.1");
-    define('DB_USER', "shippable");
-    define('DB_PASSWORD', "test");
+    define('DB_USER', "postgres");
+    define('DB_PASSWORD', "");
     define('DB_DATABASE', "test");
     define('DB_DRIVER', "mysql");
 
