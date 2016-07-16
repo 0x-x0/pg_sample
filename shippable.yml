@@ -7,6 +7,9 @@ services:
   - postgres
 
 before_script:
+  - apt-get install php5-dev
+  - pecl install pdo
+  - pecl install pdo_pgsql
   - currentLocation="$PWD"
   - service mysql.server start
   - mkdir -p shippable/testresults
